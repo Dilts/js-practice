@@ -1,0 +1,26 @@
+header{
+	height: 75px;
+	background-color: green;
+	color: white;
+	font-size: 200%;
+	t
+}
+
+.info{
+}
+
+.waldo{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+.basic-info{
+	list-style-type: none;
+}
+
+
+.main-content{
+	float: left;
+	margin-top: 50px;
+}
