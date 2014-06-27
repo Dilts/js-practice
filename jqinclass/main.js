@@ -43,21 +43,35 @@
 // _______________PART TWO_____________
 
 
-$(document).on('ready', function() {
+// $(document).on('ready', function() {
 
-	// $(document).on('click', function(e){
-	// 	var targ = $(eventArgs.target);
-	// 	console.log(e);
-	// 	if(targ.text() === "Something Cool"){
-	// 		console.log('that is so cool')
-	// 	}
-	// });
+// 	// $(document).on('click', function(e){
+// 	// 	var targ = $(eventArgs.target);
+// 	// 	console.log(e);
+// 	// 	if(targ.text() === "Something Cool"){
+// 	// 		console.log('that is so cool')
+// 	// 	}
+// 	// });
 
-	// Delegated event handler for all buttons
-	$(document).on('click', 'button', function(){
-		// Log the text of the currently clicked item
-		console.log( $(this).text() );
-	})
+// 	// Delegated event handler for all buttons
+// 	$(document).on('click', 'button', function(){
+// 		// Log the text of the currently clicked item
+// 		console.log( $(this).text() );
+// 	})
 
 
-});
+// });
+
+
+
+// _____________Friday In Class_________________
+
+// $(document).on('ready', function() {
+//   $('li').on('click', function(){
+
+//   })
+// });
+
+// $('ul').append('<li>Item 3</li>')
+
+

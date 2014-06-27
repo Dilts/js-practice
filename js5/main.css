@@ -6,6 +6,10 @@ header{
 	t
 }
 
+p:hover{
+	cursor: text;
+}
+
 #wrapper{
 	margin-left: 100px;
 	margin-right: 100px;
@@ -29,3 +33,4 @@ header{
 	float: left;
 	margin-top: 50px;
 }
+

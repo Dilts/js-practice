@@ -18,11 +18,43 @@ $(document).on('ready', function() {
 // ____________PART TWO________________
 
 	$('p').on('mouseover', function(){
-		$('p').css('background-color', 'red');
+		$(this).css('color', 'pink');
 	})
 	$('p').on('mouseout', function(){
-		$('p').css('background-color', 'white');
+		$(this).css('color', 'black');
+	})
+	$('h3').append('!')
+
+
+	$('.confirm').on('click', function(e){
+		var response = confirm('Are you sure you want to leave this page?');
+		console.log(response);
+		if(response === false) {
+			alert('You will stay on this page');
+			e.preventDefault();
+			$('.confirm').remove()
+		};
+	});
+
+
+
+	// $('.confirm').confirm({
+	// 	text: ' Are you sure you want to leave this page?',
+	// 	title: 'Confirmation required',
+	// 	confirm: function(button) {
+
+	// 	},
+	// 	cancel: function(button) {
+
+	// 	}
+
+	// })
+// ____________PART THREE______________
+
+	$('#huge').click(function(){
+		$('#huge').before('<div class="pop">Check it out</div>');
 	})
 
-});
+
+	})
 

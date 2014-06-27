@@ -24,7 +24,14 @@ $('#p1').click(function() {
 	$('#p1').before(input)
 	$('#para').height(size2)
 	$('#para').css('margin', (size - size2)/2)
-	input.val($('#p1').text());})
+	input.val($('#p1').text());
+	input.on('blur', function(){
+		originalField.text(input.val());
+
+	})
+
+
+	})
 
 $('#p2').click(function() {
 	$('#p2').hide()
@@ -40,4 +47,16 @@ $('#p3').click(function() {
 	$('#para3').css('margin', (size5 - size6)/2)
 	input.val($('#p1').text());})
 
+    input.on('blur', function(){
 
+      // when the input is blurred, update the original field to
+      // the input's value
+      originalField.text(input.val());
+
+      // remove the input
+      input.remove();
+
+      // show the original element
+      originalField.show();
+
+    });

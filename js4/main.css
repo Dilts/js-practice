@@ -1,3 +1,19 @@
 #section1, #section2, #section3{
 	width: 150px;
 }
+
+#huge{
+	width: 600px;
+	height: 600px;
+	position: relative;
+}
+
+.pop{
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	position: fixed;
+	vertical-align: center;
+	
+	z-index: 1;
+}
