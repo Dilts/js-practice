@@ -72,6 +72,68 @@
 //   })
 // });
 
-// $('ul').append('<li>Item 3</li>')
+// 
+
+// ___________________Monday in Classs______________________
+// 	var time = [];
+
+// var stopwatch = function(hours, minutes, seconds) {
+// 	time.push({
+// 		'hours': hours,
+// 		'minutes': minutes,
+// 		'seconds': seconds
+// 	});
+
+
+// 	if(hours === undefined) {
+// 		hours = 0;
+// 	}
+// 	if(minutes === undefined) {
+// 		minutes = 0;
+// 	}
+// 	if(seconds === undefined) {
+// 		seconds = 0;
+// 	}
+// 	console.log(hours, minutes, seconds);
+// 	return time;
+// }
+
+// stopwatch(3, 6);
+
+
+// ____________Tuesday________________
+
+var gamesList =[];
+
+gamesList.push({
+	title:"Braid",
+	description: "Kinda like mario"
+})
+
+gamesList.push({
+	title:"DK",
+	description: "Kinda like mario but with a monkey!"
+})
+
+console.log(gamesList)
+
+
+// Utility Functions
+
+var renderList = function(){
+	// Empty items from view
+	$('games-list').empty();
+
+	// Loop through and render each game
+	for (car i=0, i <gamesList.length; i++
+
+}
+
+
+
+
+
+
+
 
 
