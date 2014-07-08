@@ -21,6 +21,13 @@ firstReverse(str2);
 
 function swapCase(input) {
 
-	return input.split('').toUpperCase();
+	// var firstStep = input.toUpperCase().split(' ');
+	// return firstStep.charAt(0).toLowerCase();
+	
+
+
+	return input.toUpperCase().split(' ')
+
+
 };
 console.log(swapCase(str));

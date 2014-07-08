@@ -1,0 +1,57 @@
+
+
+#wrapper{
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+#header-nav {
+	background-color: rgb(52, 152, 219);
+	height: 75px;
+/*	position: fixed;
+*/
+}
+
+
+#main-content{
+
+
+}
+
+
+#add-quote {
+	height: 50px;
+	background-color: rgb(46, 204, 113);
+
+}
+
+#quote-log {
+	max-width: 49%;
+	background-color: rgb(142, 68, 173);
+	/*float: left;*/
+}
+
+#hidden {
+
+}
+
+
+/*
+.add-button {
+	height: 200px;
+	width: 200px;
+	margin: 25px;
+	/*background-color: */
+/*}
+
+.submit-button {
+	height: 200px;
+	width: 200px;
+	margin: 25px;
+	/*background-color: */
+
+/*p {
+	float: right;
+	clear: right;
+	position: absolute;
+}*/
