@@ -77,6 +77,7 @@
 // 	Person.call(this, name, age);
 // 	}
 // };
+// 
 // Athlete.prototype = new Person();
 // Athlete.prototype.constructor = Athlete;
 
@@ -113,17 +114,94 @@
 // 
 // 
 // 
-var str = 'racecar'
+// var str = 'racecar'
 
-function palindrome(input) {
-	var reversed = input.split('').reverse().join('');
+// function palindrome(input) {
+// 	var reversed = input.split('').reverse().join('');
 
-	if (reversed === input) {
-		console.log('This is a palindrome')
-	}
-	else {
-		console.log('This is not!')
-	}
+// 	if (reversed === input) {
+// 		console.log('This is a palindrome')
+// 	}
+// 	else {
+// 		console.log('This is not!')
+// 	}
 	
+// }
+// console.log(palindrome(str));
+
+
+// _________________PROTO PRACTICE________________
+
+var FuelStation = function () {
+
+};
+
+FuelStation.prototype.refueling = function(truck) {
+	truck.fuel = 100;
 }
-console.log(palindrome(str));
+
+
+var Truck = function(color) {
+	if(color) {
+		this.color = color;
+	}
+	this.iconType = 'truck';
+    this.fuel = 100;
+
+// this.create = function(){
+// 	var el = $('<i>')
+// 	.addClass('icon-' + this.iconType)
+// 	.css('color', this.color);
+// 		return el;
+// 	};
+
+};
+
+Truck.prototype.color = 'blue';
+// Truck.prototype.constructor = Truck;
+
+Truck.prototype.create = function(){
+	 this.el = $('<i>')
+	.addClass('icon-' + this.iconType)
+	.css('color', this.color);
+		
+		return this.el;
+	};
+Truck.prototype.updateColor = function() {
+	this.el.css('color', this.color);
+}
+
+Truck.prototype.drive = function() {
+	this.fuel -= 10; 
+}
+
+
+
+var Ambulance = function() {
+	this.iconType = 'ambulance'
+};
+
+Ambulance.prototype = new Truck('red');
+Ambulance.prototype.constructor = Ambulance;
+
+
+
+var burritoBus = new Truck();
+// console.log(burritoTruck.fuel);
+$('body').append(burritoBus.create());
+// console.log(burritoTruck.fuel);
+
+
+
+var tofurkeyBus = new Truck();
+$('body').append(tofurkeyBus.create());
+
+var ambulance = new Ambulance();
+$('body').append(ambulance.create());
+
+
+var hess = new FuelStation();
+var conoco = new FuelStation();
+
+
+// Called hess.refueling(burritoBus)  in console to refuel the Truck
