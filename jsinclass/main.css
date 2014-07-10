@@ -18,10 +18,19 @@ html, body {
 }
 
 
-#penguin {
+.penguin {
 	position: absolute;
 	bottom: 0;
 }
+
+.flock {
+	position: absolute;
+	height: 50px;
+	display: inline-block;
+}
+
+
+
 
 #moon {
 	position: absolute;
