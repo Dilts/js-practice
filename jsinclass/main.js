@@ -132,21 +132,21 @@
 
 // _________________PROTO PRACTICE________________
 
-var FuelStation = function () {
+// var FuelStation = function () {
 
-};
+// };
 
-FuelStation.prototype.refueling = function(truck) {
-	truck.fuel = 100;
-}
+// FuelStation.prototype.refueling = function(truck) {
+// 	truck.fuel = 100;
+// }
 
 
-var Truck = function(color) {
-	if(color) {
-		this.color = color;
-	}
-	this.iconType = 'truck';
-    this.fuel = 100;
+// var Truck = function(color) {
+// 	if(color) {
+// 		this.color = color;
+// 	}
+// 	this.iconType = 'truck';
+//     this.fuel = 100;
 
 // this.create = function(){
 // 	var el = $('<i>')
@@ -155,53 +155,124 @@ var Truck = function(color) {
 // 		return el;
 // 	};
 
-};
+// };
 
-Truck.prototype.color = 'blue';
-// Truck.prototype.constructor = Truck;
+// Truck.prototype.color = 'blue';
+// // Truck.prototype.constructor = Truck;
 
-Truck.prototype.create = function(){
-	 this.el = $('<i>')
-	.addClass('icon-' + this.iconType)
-	.css('color', this.color);
+// Truck.prototype.create = function(){
+// 	 this.el = $('<i>')
+// 	.addClass('icon-' + this.iconType)
+// 	.css('color', this.color);
 		
-		return this.el;
+// 		return this.el;
+// 	};
+// Truck.prototype.updateColor = function() {
+// 	this.el.css('color', this.color);
+// }
+
+// Truck.prototype.drive = function() {
+// 	this.fuel -= 10; 
+// }
+
+
+
+// var Ambulance = function() {
+// 	this.iconType = 'ambulance'
+// };
+
+// Ambulance.prototype = new Truck('red');
+// Ambulance.prototype.constructor = Ambulance;
+
+
+
+// var burritoBus = new Truck();
+// // console.log(burritoTruck.fuel);
+// $('body').append(burritoBus.create());
+// // console.log(burritoTruck.fuel);
+
+
+
+// var tofurkeyBus = new Truck();
+// $('body').append(tofurkeyBus.create());
+
+// var ambulance = new Ambulance();
+// $('body').append(ambulance.create());
+
+
+// var hess = new FuelStation();
+// var conoco = new FuelStation();
+
+
+// // Called hess.refueling(burritoBus)  in console to refuel the Truck
+
+
+
+
+// __________________THURSDAY__________________
+
+// Iffy is a function expression surrounded by paratheses and then 
+// immediately invoked
+var MoonGame = (function() {
+
+		//Constants
+	var NUM_BIRDS = 20;
+	var MAX_TOP = 60;
+	var MAX_LEFT = 90;
+		//Bird Constructor
+	var Bird = function() {
+
 	};
-Truck.prototype.updateColor = function() {
-	this.el.css('color', this.color);
-}
 
-Truck.prototype.drive = function() {
-	this.fuel -= 10; 
-}
+	Bird.prototype.create = function() {
+			this.el = $('<i class="bird icon-twitter-bird"></i>');
+			this.el.css({
+				top: Math.random() * MAX_TOP + '%',
+				left: Math.random() * MAX_LEFT + '%'
+			})
 
-
-
-var Ambulance = function() {
-	this.iconType = 'ambulance'
-};
-
-Ambulance.prototype = new Truck('red');
-Ambulance.prototype.constructor = Ambulance;
+			return this.el;
+	};
 
 
 
-var burritoBus = new Truck();
-// console.log(burritoTruck.fuel);
-$('body').append(burritoBus.create());
-// console.log(burritoTruck.fuel);
+		//Declare array of free-flying birds
+	var birds = [];
+	var flock = null;
+
+
+	var init = function() {
+		for(var i=0; i<NUM_BIRDS; i++) {
+			var bird = new Bird();
+			var birdEl = bird.create();
+			$('.sky').append(birdEl);
+		}	
+	}
+
+	// Return an object literal with the properties and methods that
+	// we wish to "reveal" to the rest of the program.
+	// Everything else remains private
+	return {
+		init: init
+	};
+
+})();
 
 
 
-var tofurkeyBus = new Truck();
-$('body').append(tofurkeyBus.create());
-
-var ambulance = new Ambulance();
-$('body').append(ambulance.create());
 
 
-var hess = new FuelStation();
-var conoco = new FuelStation();
 
 
-// Called hess.refueling(burritoBus)  in console to refuel the Truck
+
+$(document).on('ready', function() {
+	MoonGame.init();
+});
+
+
+
+
+
+
+
+
